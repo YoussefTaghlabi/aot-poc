@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "cleanup": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
-    "build": "webpack"
+    "start": "yarn cleanup && webpack-dev-server",
+    "build": "yarn cleanup && webpack",
+    "ngc": "yarn cleanup && ngc"
   },
   "author": "",
   "license": "ISC",

@@ -1,14 +1,14 @@
 import { RequestMethod, Response, ResponseOptions } from '@angular/http';
 
-import { MockabilityResponses } from '../mockability';
+import { MockabilityResponses } from '@c1/mockability';
 
-function response() {
+export function response() {
   return new Response(new ResponseOptions({ body: JSON.stringify([{ accountId: '12345' }]) }));
 }
 
 export const requests: MockabilityResponses = [
   {
-    url: '/api/card-accounts/',
+    url: /api\/card-accounts/,
     method: RequestMethod.Get,
     response
   }
