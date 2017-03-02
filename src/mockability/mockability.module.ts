@@ -25,11 +25,11 @@ export function createHttp(backend: MockBackend, options: BaseRequestOptions) {
   ]
 })
 export class MockabilityModule {
-  public static forRoot(responses: MockabilityResponse[]): ModuleWithProviders {
+  public static forRoot(responses: () => MockabilityResponse[]): ModuleWithProviders {
     return {
       ngModule: MockabilityModule,
       providers: [
-        { provide: MOCKABILITY_RESPONSES, useValue: responses }
+        { provide: MOCKABILITY_RESPONSES, useFactory: responses, deps: [] }
       ]
     };
   }

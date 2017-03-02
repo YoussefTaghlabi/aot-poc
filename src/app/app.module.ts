@@ -9,7 +9,6 @@ import { appRoutes } from './app.routes';
 import { ExampleComponent } from './example/example.component';
 import { C1ComponentsModule } from '@c1/components';
 
-
 import { MockabilityModule } from '@c1/mockability';
 import { mocks } from '@c1/mocks';
 
